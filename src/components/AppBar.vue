@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-toolbar flat app>
+    <v-toolbar flat app class="appBar">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-regular">Taskify</span>
@@ -35,7 +35,7 @@ export default {
       items: [
         { icon: "dashboard", text: "Home", route: "/" },
         { icon: "folder", text: "About", route: "/about" },
-        // { icon: "group", text: "Teams", route: "/teams" },
+        { icon: "group", text: "Teams", route: "/thought" },
       ],
     };
   },

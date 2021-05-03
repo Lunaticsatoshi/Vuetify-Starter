@@ -16,7 +16,7 @@ export default new Vuetify({
         error: '#f83e70',
       } */
   theme: {
-    dark: true,
+    dark: false,
     themes: {
       light: {
         primary: "#9652ff",
@@ -26,6 +26,7 @@ export default new Vuetify({
         accent: colors.shades.black,
         error: colors.red.accent3,
         button: colors.red.darken3,
+        appBar: "#FFDBAC"
       },
       dark: {
         primary: "#9652ff",
@@ -35,6 +36,7 @@ export default new Vuetify({
         accent: colors.blueGrey.darken3,
         error: colors.red.accent3,
         button: colors.red.darken3,
+        appBar: "#FFE5B4"
       },
     },
   },
