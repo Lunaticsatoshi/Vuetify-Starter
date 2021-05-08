@@ -16,14 +16,10 @@
                 :brushUrl="brushUrl"
                 :forceReveal="forceReveal"
             >
-              <v-card class="text-center mx-auto">
-                <v-responsive class="pt-4">
-                  <v-avatar size="80">
-                    <v-img
-                        src="https://images.unsplash.com/photo-1619958405137-8dc6281021bb?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    />
-                  </v-avatar>
-                </v-responsive>
+              <v-card class="text-center mx-auto"
+                      :width="cardWidth"
+                      :height="cardHeight">
+
                 <v-card-text>
                   <div class="heading mt-1">{{$t(`affirmations[${day}]`)}}</div>
                 </v-card-text>

@@ -16,16 +16,12 @@
                 :brushUrl="brushUrl"
                 :forceReveal="forceReveal"
             >
-              <v-card class="text-center mx-auto">
-                <v-responsive class="pt-4">
-                  <v-avatar size="80">
-                    <img
-                        src="https://images.unsplash.com/photo-1619958405137-8dc6281021bb?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    />
-                  </v-avatar>
-                </v-responsive>
-                <v-card-text>
-                  <div class="heading mt-1">Positive Mindset</div>
+              <v-card class="text-center mx-auto"
+                      :width="cardWidth"
+                      :height="cardHeight">
+
+              <v-card-text>
+                <div class="heading mt-1">{{$t(`activity[${day}]`)}}</div>
                 </v-card-text>
               </v-card>
             </scratch-card>
@@ -58,6 +54,7 @@
 
 <script>
 import ScratchCard from "vue-scratchcard";
+import {mapGetters} from "vuex"
 export default {
   name: "Activity",
   components: {
@@ -75,6 +72,11 @@ export default {
 
     };
   },
+  computed: {
+    ...mapGetters([
+      'day',
+    ])
+  }
 };
 </script>
 
