@@ -67,8 +67,8 @@ export default {
 
         },
         {
-          name: "Entertainment",
-          path: 'entertainment'
+          name: "Activity",
+          path: 'activity'
 
         },
         {

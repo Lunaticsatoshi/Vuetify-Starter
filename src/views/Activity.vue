@@ -59,7 +59,7 @@
 <script>
 import ScratchCard from "vue-scratchcard";
 export default {
-  name: "Affirmations",
+  name: "Activity",
   components: {
     ScratchCard,
   },
@@ -72,6 +72,7 @@ export default {
       finishPercent: 70,
       forceReveal: false,
       brushUrl: ''
+
     };
   },
 };
