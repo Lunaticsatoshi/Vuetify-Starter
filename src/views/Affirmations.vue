@@ -25,7 +25,7 @@
                   </v-avatar>
                 </v-responsive>
                 <v-card-text>
-                  <div class="heading mt-1">Positive Mindset</div>
+                  <div class="heading mt-1">{{$t(`affirmations[${day}]`)}}</div>
                 </v-card-text>
               </v-card>
             </scratch-card>
@@ -58,6 +58,7 @@
 
 <script>
 import ScratchCard from "vue-scratchcard";
+import {mapGetters} from "vuex"
 export default {
   name: "Affirmations",
   components: {
@@ -74,6 +75,12 @@ export default {
       brushUrl: ''
     };
   },
+  computed: {
+    ...mapGetters([
+      'day',
+    ])
+  }
+
 };
 </script>
 
