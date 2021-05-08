@@ -1,6 +1,15 @@
 <template>
   <div class="home">
     <v-container class="my-5 mx-auto">
+
+    <v-select class="d-flex"
+        cols="12"
+        sm="6"
+          :items="items"
+          label="Select Day"
+          dense
+          solo
+        ></v-select>
       <h1>Today Is</h1>
       <v-container row wrap class="my-5">
         <v-row>
@@ -32,24 +41,27 @@ export default {
   },
   data() {
     return {
+      hidden: false,
+      items: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
       cards: [
         {
-          name: "Positive Mindset",
+          name: "Morning Routine",
+          icon: "account-clock",
         },
         {
           name: "Positive Affirmations",
         },
         {
-          name: "Morning Routine",
-        },
-        {
-          name: "Study",
-        },
-        {
           name: "Gratitude",
         },
         {
-          name: "Productivity",
+          name: "Short Story",
+        },
+        {
+          name: "Entertainment",
+        },
+        {
+          name: "Journal",
         },
       ],
     };

@@ -1,13 +1,13 @@
 <template>
   <nav>
-    <v-toolbar flat app class="appBar">
+    <v-app-bar flat app >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-regular">Taskify</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items> </v-toolbar-items>
-    </v-toolbar>
+    </v-app-bar>
     <v-navigation-drawer absolute temporary v-model="drawer" class="primary">
       <v-list nav dense v-model="items">
         <v-list-item :key="item.text" v-for="item in items" :to="item.route">
