@@ -10,7 +10,7 @@
           dense
           solo
         ></v-select>
-      <h1>Today Is {{$t('day')+ " "+this.day}}</h1>
+      <h1>Today Is {{$t('day')+ " "+(this.day + 1)}}</h1>
       <v-container row wrap class="my-5">
         <v-row>
           <v-col

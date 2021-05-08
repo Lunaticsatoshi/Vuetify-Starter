@@ -7,7 +7,7 @@
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
           <v-col>
-            <vue-typed-js :strings="[$t('short_stories_'+this.day)]">
+            <vue-typed-js :strings="[$t(`short_stories[${day}]`)]">
               <h1 class="typing"></h1>
             </vue-typed-js>
           </v-col>
