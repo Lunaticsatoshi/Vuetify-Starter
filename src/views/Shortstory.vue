@@ -43,7 +43,7 @@
 <script>
 import ScratchCard from "vue-scratchcard";
 export default {
-  name: "Scratch",
+  name: "ShortStory",
   components: {
     ScratchCard,
   },
