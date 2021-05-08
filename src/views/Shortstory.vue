@@ -1,7 +1,7 @@
 <template>
   <div id="scratch">
     <v-container class="my-8 mx-auto text-center">
-      
+
       <h3>Short stories to bring you back to savour the happiness in tiny moments.</h3>
       <h3>Read today's story and retrospect</h3>
       <v-container fluid class="my-5">
@@ -18,9 +18,9 @@
             >
               <v-card class="text-center mx-auto">
                 <v-responsive class="pt-4">
-                  
+
                     <h5>STORY1 very important lesson. make space to fit big story. No matter what I did to the money</h5>
-                  
+
                 </v-responsive>
                 <v-card-text>
                   <div class="heading mt-1">Short Story</div>
@@ -29,7 +29,7 @@
             </scratch-card>
           </v-col>
         </v-row>
-        
+
         <v-row>
           <v-col cols="12">
             <v-btn block color="yellow">Task Completed | 2 points</v-btn></v-col
@@ -55,6 +55,7 @@ export default {
       cardHeight: 155,
       finishPercent: 70,
       forceReveal: false,
+      brushUrl: ''
     };
   },
 };
