@@ -2,14 +2,6 @@
   <div class="home">
     <v-container class="my-5 mx-auto">
 
-    <v-select class="d-flex"
-        cols="12"
-        sm="6"
-          :items="items"
-          label="Select Day"
-          dense
-          solo
-        ></v-select>
       <h1>Today Is {{$t('day')+ " "+(this.day + 1)}}</h1>
       <v-container row wrap class="my-5">
         <v-row>
@@ -33,7 +25,7 @@
 </template>
 
 <script>
-import {mapMutations, mapGetters} from 'vuex'
+import {mapMutations, mapGetters,mapActions} from 'vuex'
 import Card from "../components/Card";
 export default {
   name: "Home",
@@ -44,7 +36,6 @@ export default {
   data() {
     return {
       hidden: false,
-      items: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'],
       cards: [
         {
           name: "Morning Routine",
@@ -86,11 +77,16 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'updateStartDate', // map `this.increment()` to `this.$store.commit('increment')`
+      'updateStartDate',
+    ]),
+    ...mapActions([
+      'updateCurrentDay',
     ]),
   },
   created() {
-    this.updateStartDate(new Date('2021-05-05').getTime())
+    console.log('home')
+    // this.updateStartDate(new Date('2021-05-05').getTime())
+    this.updateCurrentDay(this.day)
   }
 };
 </script>

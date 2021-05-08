@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from "vuex-persistedstate";
+import { getField, updateField } from 'vuex-map-fields';
 
 Vue.use(Vuex)
 
@@ -8,10 +9,149 @@ export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
     startTimeStamp: new Date().getTime(),
+    currentDay: 0,
     morning : {
+      oxygen:  [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+     /* gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+      gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+      gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+      gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+      gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+      gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]
+      gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ]*/
+
     }
   },
   getters: {
+    getField,
     day(state){
     // To calculate the time difference of two dates
       let Difference_In_Time = new Date().getTime() - state.startTimeStamp
@@ -23,11 +163,18 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    updateField,
+    updateOxygen(state, val){
+      state.morning.oxygen[val.day] = val.value
+    },
     updateStartDate(state, val){
       state.startTimeStamp = val
     }
   },
   actions: {
+      updateCurrentDay({state}, val){
+        state.currentDay = val
+      }
   },
   modules: {
   }
