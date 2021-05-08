@@ -30,11 +30,9 @@ export default {
     card: Object
   },
   created() {
-    console.log(JSON.stringify(this.card))
   },
   methods: {
     changeWindow(page){
-      console.log(JSON.stringify(page))
       this.$router.push(`${{page}}`)
     }
   }
