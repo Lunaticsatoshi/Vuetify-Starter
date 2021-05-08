@@ -3,7 +3,7 @@
     <v-app-bar flat app >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
-        <span class="font-weight-regular">Taskify</span>
+        <span class="font-weight-regular">{{$t(this.$route.name)}}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items> </v-toolbar-items>

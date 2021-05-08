@@ -1,22 +1,7 @@
 <template>
    <v-card
     class="mx-auto"
-    max-width="400"
   >
-    <v-toolbar
-      color="purple"
-      dark
-    >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Morning Routine</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-    </v-toolbar>
 
     <v-list
       subheader
@@ -40,7 +25,6 @@
       <v-subheader>General</v-subheader>
 
       <v-list-item-group
-        v-model="settings"
         multiple
         active-class=""
       >
@@ -148,14 +132,20 @@
           </template>
         </v-list-item>
 
-        
+
       </v-list-item-group>
     </v-list>
   </v-card>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'Morning',
+  data() {
+    return {
+    }
+  }
+};
 </script>
 
 <style>
