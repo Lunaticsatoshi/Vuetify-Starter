@@ -139,6 +139,7 @@
 </template>
 
 <script>
+import {} from 'vuex'
 export default {
   name: 'Morning',
   data() {

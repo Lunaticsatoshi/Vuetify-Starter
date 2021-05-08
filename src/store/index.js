@@ -7,7 +7,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
-    startTimeStamp: new Date().getTime()
+    startTimeStamp: new Date().getTime(),
+    morning : {
+    }
   },
   getters: {
     day(state){
