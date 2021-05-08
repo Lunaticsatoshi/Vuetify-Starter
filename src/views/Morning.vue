@@ -9,8 +9,8 @@
     >
     <v-list-item>
         <v-list-item-content>
-          <v-list-item-title>Monitor & Regulate Your Routine</v-list-item-title>
-          <v-list-item-subtitle>Start your day on the right foot</v-list-item-subtitle>
+          <v-list-item-title>{{$t('morning_title_1')}}</v-list-item-title>
+          <v-list-item-subtitle>{{$t('morning_title_2')}}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-list>
