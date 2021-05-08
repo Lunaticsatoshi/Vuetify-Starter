@@ -2,7 +2,7 @@
   <div id="scratch">
     <v-container class="my-8 mx-auto text-center">
 
-      <h3> Positive Affirmations can help you feel at peace and boost positive vibes. It's a wonderful way to keep going through the day!</h3>
+      <h3> JOURNAL</h3>
       <h3>Scratch to see today's Challenge</h3>
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
@@ -56,8 +56,9 @@
 import ScratchCard from "vue-scratchcard";
 import {mapGetters} from "vuex"
 export default {
-  name: "Activity",
+  name: "Journal",
   components: {
+
     ScratchCard,
   },
 
