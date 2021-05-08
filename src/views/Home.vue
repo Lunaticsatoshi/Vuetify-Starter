@@ -18,9 +18,10 @@
             md="4"
             lg="4"
             v-for="card in cards"
-            :key="card.id"
+            :key="card.name"
           >
-            <Card :card="card" />
+            <Card :card="card" >
+            </Card>
           </v-col>
         </v-row>
       </v-container>
@@ -46,22 +47,33 @@ export default {
       cards: [
         {
           name: "Morning Routine",
-          icon: "account-clock",
+          icon: "mdi-account-clock",
+          path: 'morning'
         },
         {
           name: "Positive Affirmations",
+          path: 'affirmations'
+
         },
         {
           name: "Gratitude",
+          path: 'gratitude'
+
         },
         {
           name: "Short Story",
+          path: 'shortStory'
+
         },
         {
           name: "Entertainment",
+          path: 'entertainment'
+
         },
         {
           name: "Journal",
+          path: 'journal'
+
         },
       ],
     };
