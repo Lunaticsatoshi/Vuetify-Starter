@@ -1,3 +1,18 @@
 {
-  "message": "hello i18n !!"
+  "day": "Day",
+  "short_stories_1" : "Short story 1",
+  "short_stories_2" : "Short story 2",
+  "short_stories_3" : "Short story 3",
+  "short_stories_4" : "Short story 4",
+  "short_stories_5" : "Short story 5",
+  "short_stories_6" : "Short story 6",
+  "short_stories_7" : "Short story 7",
+  "short_stories_8" : "Short story 8",
+  "short_stories_9" : "Short story 9",
+  "short_stories_10" : "Short story 10",
+  "short_stories_11" : "Short story 11",
+  "short_stories_12" : "Short story 12",
+  "short_stories_13" : "Short story 13",
+  "short_stories_14" : "Short story 14",
+  "short_stories_15" : "Short story 15"
 }

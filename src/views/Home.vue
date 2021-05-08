@@ -10,7 +10,7 @@
           dense
           solo
         ></v-select>
-      <h1>Today Is</h1>
+      <h1>Today Is {{$t('day')+ " "+this.day}}</h1>
       <v-container row wrap class="my-5">
         <v-row>
           <v-col
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import {mapMutations, mapGetters} from 'vuex'
 import Card from "../components/Card";
 export default {
   name: "Home",
@@ -78,5 +79,18 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapGetters([
+      'day',
+    ])
+  },
+  methods: {
+    ...mapMutations([
+      'updateStartDate', // map `this.increment()` to `this.$store.commit('increment')`
+    ]),
+  },
+  created() {
+    this.updateStartDate(new Date('2021-05-05').getTime())
+  }
 };
 </script>

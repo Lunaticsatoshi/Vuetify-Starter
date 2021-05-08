@@ -7,7 +7,7 @@
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
           <v-col>
-            <vue-typed-js :strings="['First text', 'Second Text']">
+            <vue-typed-js :strings="[$t('short_stories_'+this.day)]">
               <h1 class="typing"></h1>
             </vue-typed-js>
           </v-col>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   name: "ShortStory",
   components: {
@@ -39,6 +40,11 @@ export default {
       brushUrl: ''
     };
   },
+  computed: {
+    ...mapGetters([
+      'day',
+    ])
+  }
 };
 </script>
 
