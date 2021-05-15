@@ -164,7 +164,8 @@ export default {
     }
   },
   created() {
-    // this.$store.dispatch('updateCurrentDay',this.day)
+    this.$store.dispatch('updateCurrentDay',this.day)
+
     this.oxygen = this.$store.state.morning.oxygen[this.day]
   }
 
