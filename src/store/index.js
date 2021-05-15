@@ -149,7 +149,59 @@ export default new Vuex.Store({
       ]
 
     },
-    gratitude:{},
+    gratitude:{
+      gratitudeText: [
+          '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ''
+      ],
+      /*oxygen:  [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
+      Gargles: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],*/
+    },
     journal:{}
   },
   getters: {
@@ -172,6 +224,10 @@ export default new Vuex.Store({
     updateGargles(state, val){
       state.morning.Gargles[val.day] = val.value
     },
+
+    updateGratitudeText(state, val){
+      state.gratitude.gratitudeText[val.day] = val.value
+    },
     updateStartDate(state, val){
       state.startTimeStamp = val
     }
@@ -179,7 +235,7 @@ export default new Vuex.Store({
   actions: {
       updateCurrentDay({state}, val){
         state.currentDay = val
-      }
+      },
   },
   modules: {
   }

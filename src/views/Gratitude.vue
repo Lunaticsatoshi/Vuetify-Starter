@@ -2,6 +2,7 @@
   <v-container class="my-5 mx-auto">
     <h3>What are you most grateful for today</h3>
     <v-text-field
+        v-model="gratitudeText"
         label="I am grateful for my health..."
         class="mt-6"
         block
@@ -45,12 +46,44 @@
 </template>
 
 <script>
+import {mapGetters, mapState} from "vuex"
+
 export default {
   name: 'Gratitude',
+  data(){
+    return {
+      gratitudeText: ''
+    }
+  },
+  computed: {
+    ...mapState({
+      currentDay: state=>state.currentDay
+    }),
+    ...mapGetters([
+      'day',
+    ]),
+  },
+  watch: {
+    currentDay(value){
+      this.gratitudeText = this.$store.state.gratitude.gratitudeText[value]
+    /*  this.Gargles   = this.$store.state.morning.Gargles[value]
+      this.Medicine  = this.$store.state.morning.Medicine[value]
+     */
+    },
+    oxygen(value){
+      this.$store.commit('updateGratitudeText',{day: this.currentDay, value})
+    },
+   /* Gargles(value){
+      this.$store.commit('updateGargles',{day: this.currentDay, value})
+    }*/
+  },
   created() {
-    this.$store.dispatch('updateCurrentDay',this.$store.state.day)
+    this.$store.dispatch('updateCurrentDay',this.day)
 
+    this.gratitudeText = this.$store.state.gratitude.gratitudeText[this.day]
+    /*this.Gargles = this.$store.state.morning.Gargles[this.day]*/
   }
+
 };
 </script>
 
