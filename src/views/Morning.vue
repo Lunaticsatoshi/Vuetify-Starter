@@ -137,7 +137,6 @@
 </template>
 
 <script>
-// import { mapFields } from 'vuex-map-fields';
 import {mapGetters, mapState} from "vuex"
 
 export default {
