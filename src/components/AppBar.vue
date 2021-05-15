@@ -1,7 +1,11 @@
 <template>
   <div>
     <v-app-bar flat app color='purple lighten-4'>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="pressHomeIcon">
+        <slot v-if="this.$route.name !== 'Home'">
+          <v-icon>mdi-arrow-left</v-icon>
+        </slot>
+      </v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-regular">{{$t(this.$route.name)}}</span>
       </v-toolbar-title>
@@ -69,6 +73,15 @@ export default {
   watch: {
     day(v){
       this.$store.dispatch('updateCurrentDay',v)
+    }
+  },
+  methods: {
+    pressHomeIcon(){
+      if (this.$route.name !== 'Home')
+        this.$router.go(-1)
+      else
+        this.drawer = !this.drawer
+
     }
   },
   created() {
