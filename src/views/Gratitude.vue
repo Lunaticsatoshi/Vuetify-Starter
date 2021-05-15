@@ -13,35 +13,30 @@
       <v-list>
         <v-list-item-group>
           <v-list-item>
-            <template v-slot:default="{ active }">
               <v-list-item-content>
                 <v-list-item-title>
                   <span class="font-weight-bold">I am grateful for me</span>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-action>
-                <v-checkbox :input-value="active"></v-checkbox>
+                <v-checkbox v-model="gratitudeCheck1"></v-checkbox>
               </v-list-item-action>
-            </template>
           </v-list-item>
         </v-list-item-group>
         <v-list-item-group>
           <v-list-item>
-            <template v-slot:default="{ active }">
               <v-list-item-content>
                 <v-list-item-title>
                   <span class="font-weight-bold">I smiled today</span>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-action>
-                <v-checkbox :input-value="active"></v-checkbox>
+                <v-checkbox v-model="gratitudeCheck2"></v-checkbox>
               </v-list-item-action>
-            </template>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-container>
-    <v-btn  block absolute bottom class="appBar">Save</v-btn>
   </v-container>
 </template>
 
@@ -52,7 +47,9 @@ export default {
   name: 'Gratitude',
   data(){
     return {
-      gratitudeText: ''
+      gratitudeText: '',
+      gratitudeCheck1: false,
+      gratitudeCheck2: false,
     }
   },
   computed: {
@@ -66,22 +63,26 @@ export default {
   watch: {
     currentDay(value){
       this.gratitudeText = this.$store.state.gratitude.gratitudeText[value]
-    /*  this.Gargles   = this.$store.state.morning.Gargles[value]
-      this.Medicine  = this.$store.state.morning.Medicine[value]
-     */
+      this.gratitudeCheck1   = this.$store.state.morning.gratitudeCheck1[value]
+      this.gratitudeCheck2  = this.$store.state.morning.gratitudeCheck2[value]
     },
     gratitudeText(value){
       this.$store.commit('updateGratitudeText',{day: this.currentDay, value})
     },
-   /* Gargles(value){
-      this.$store.commit('updateGargles',{day: this.currentDay, value})
-    }*/
+    gratitudeCheck1(value){
+      this.$store.commit('updateGratitudeCheck1',{day: this.currentDay, value})
+    },
+    gratitudeCheck2(value){
+      this.$store.commit('updateGratitudeCheck2',{day: this.currentDay, value})
+    }
   },
   created() {
     this.$store.dispatch('updateCurrentDay',this.day)
 
     this.gratitudeText = this.$store.state.gratitude.gratitudeText[this.day]
-    /*this.Gargles = this.$store.state.morning.Gargles[this.day]*/
+    this.gratitudeCheck1 = this.$store.state.gratitude.gratitudeCheck1[this.day]
+    this.gratitudeCheck2 = this.$store.state.gratitude.gratitudeCheck2[this.day]
+
   }
 
 };

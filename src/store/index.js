@@ -167,8 +167,7 @@ export default new Vuex.Store({
         '',
         ''
       ],
-
-      /*oxygen:  [
+      gratitudeCheck1:  [
         false,
         false,
         false,
@@ -185,7 +184,7 @@ export default new Vuex.Store({
         false,
         false,
       ],
-      Gargles: [
+      gratitudeCheck2: [
         false,
         false,
         false,
@@ -201,7 +200,7 @@ export default new Vuex.Store({
         false,
         false,
         false,
-      ],*/
+      ],
     },
     journal:{}
   },
@@ -228,6 +227,12 @@ export default new Vuex.Store({
 
     updateGratitudeText(state, val){
       state.gratitude.gratitudeText[val.day] = val.value
+    },
+    updateGratitudeCheck1(state, val){
+      state.gratitude.gratitudeCheck1[val.day] = val.value
+    },
+    updateGratitudeCheck2(state, val){
+      state.gratitude.gratitudeCheck2[val.day] = val.value
     },
     updateStartDate(state, val){
       state.startTimeStamp = val
