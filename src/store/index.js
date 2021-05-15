@@ -202,7 +202,59 @@ export default new Vuex.Store({
         false,
       ],
     },
-    journal:{}
+    journal:{
+      journalText: [
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ''
+      ],
+      journalCheck1:  [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
+      journalCheck2: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
+    }
   },
   getters: {
     getField,
@@ -233,6 +285,16 @@ export default new Vuex.Store({
     },
     updateGratitudeCheck2(state, val){
       state.gratitude.gratitudeCheck2[val.day] = val.value
+    },
+
+    updateJournalText(state, val){
+      state.journal.journalText[val.day] = val.value
+    },
+    updateJournalCheck1(state, val){
+      state.journal.journalCheck1[val.day] = val.value
+    },
+    updateJournalCheck2(state, val){
+      state.journal.journalCheck2[val.day] = val.value
     },
     updateStartDate(state, val){
       state.startTimeStamp = val
