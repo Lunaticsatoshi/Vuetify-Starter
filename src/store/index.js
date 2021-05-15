@@ -167,6 +167,7 @@ export default new Vuex.Store({
         '',
         ''
       ],
+
       /*oxygen:  [
         false,
         false,

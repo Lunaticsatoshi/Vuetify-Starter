@@ -41,7 +41,7 @@
         </v-list-item-group>
       </v-list>
     </v-container>
-    <v-btn block absolute bottom class="appBar">Save</v-btn>
+    <v-btn  block absolute bottom class="appBar">Save</v-btn>
   </v-container>
 </template>
 
@@ -70,7 +70,7 @@ export default {
       this.Medicine  = this.$store.state.morning.Medicine[value]
      */
     },
-    oxygen(value){
+    gratitudeText(value){
       this.$store.commit('updateGratitudeText',{day: this.currentDay, value})
     },
    /* Gargles(value){
