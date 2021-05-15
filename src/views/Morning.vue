@@ -96,7 +96,7 @@
         <v-list-item>
           <template v-slot:default="{ active }">
             <v-list-item-action>
-              <v-checkbox :input-value="active"></v-checkbox>
+              <v-checkbox  :input-value="active"></v-checkbox>
             </v-list-item-action>
 
             <v-list-item-content>
@@ -107,14 +107,14 @@
         </v-list-item>
 
         <v-list-item>
-            <v-list-item-action>
+                <v-list-item-action>
               <v-checkbox v-model="oxygen"></v-checkbox>
-            </v-list-item-action>
+                </v-list-item-action>
 
-            <v-list-item-content>
-              <v-list-item-title>Oxygen Saturation</v-list-item-title>
-              <v-list-item-subtitle>Monitor O2 Saturation as prescribed by your doctor</v-list-item-subtitle>
-            </v-list-item-content>
+                <v-list-item-content>
+                  <v-list-item-title>Oxygen Saturation</v-list-item-title>
+                  <v-list-item-subtitle>Monitor O2 Saturation as prescribed by your doctor</v-list-item-subtitle>
+                </v-list-item-content>
         </v-list-item>
 
         <v-list-item>
@@ -164,6 +164,7 @@ export default {
     }
   },
   created() {
+    // this.$store.dispatch('updateCurrentDay',this.day)
     this.oxygen = this.$store.state.morning.oxygen[this.day]
   }
 

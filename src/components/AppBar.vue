@@ -47,7 +47,6 @@ export default {
   name: "AppBar",
   data() {
     return {
-      day: 0,
       drawer: false,
       rightDrawer: false,
       items: [
@@ -85,7 +84,6 @@ export default {
     }
   },
   created() {
-    this.day = this.$store.state.currentDay
   }
 };
 </script>
