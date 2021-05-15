@@ -44,6 +44,10 @@ export default {
     ...mapGetters([
       'day',
     ])
+  },
+  created() {
+    this.$store.dispatch('updateCurrentDay',this.$store.state.day)
+
   }
 };
 </script>

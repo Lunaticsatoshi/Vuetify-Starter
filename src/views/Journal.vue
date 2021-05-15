@@ -47,6 +47,11 @@
 <script>
 export default {
   name: "Journal",
+  created() {
+    this.$store.dispatch('updateCurrentDay',this.day)
+
+  }
+
 
 };
 </script>

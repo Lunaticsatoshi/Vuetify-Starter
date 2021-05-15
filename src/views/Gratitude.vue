@@ -46,7 +46,11 @@
 
 <script>
 export default {
-  name: 'Gratitude'
+  name: 'Gratitude',
+  created() {
+    this.$store.dispatch('updateCurrentDay',this.$store.state.day)
+
+  }
 };
 </script>
 
