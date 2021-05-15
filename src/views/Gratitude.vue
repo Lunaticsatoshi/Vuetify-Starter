@@ -63,8 +63,8 @@ export default {
   watch: {
     currentDay(value){
       this.gratitudeText = this.$store.state.gratitude.gratitudeText[value]
-      this.gratitudeCheck1   = this.$store.state.morning.gratitudeCheck1[value]
-      this.gratitudeCheck2  = this.$store.state.morning.gratitudeCheck2[value]
+      this.gratitudeCheck1   = this.$store.state.gratitude.gratitudeCheck1[value]
+      this.gratitudeCheck2  = this.$store.state.gratitude.gratitudeCheck2[value]
     },
     gratitudeText(value){
       this.$store.commit('updateGratitudeText',{day: this.currentDay, value})

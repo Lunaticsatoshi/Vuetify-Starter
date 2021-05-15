@@ -34,7 +34,7 @@
 <!--    Day list-->
     <v-navigation-drawer app right  v-model="rightDrawer" >
       <v-list nav dense>
-        <v-list-item v-for="day in days" :key="day.value" @click="$store.dispatch('updateCurrentDay',day.value)">{{day.text}}</v-list-item>
+        <v-list-item v-for="day in days" :key="day.value" @click=changeDay(day)>{{day.text}}</v-list-item>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -75,6 +75,10 @@ export default {
     }
   },
   methods: {
+    changeDay(day){
+      this.rightDrawer = false
+      this.$store.dispatch('updateCurrentDay',day.value)
+    },
     pressHomeIcon(){
       if (this.$route.name !== 'Home')
         this.$router.go(-1)
