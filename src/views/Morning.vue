@@ -135,7 +135,8 @@ export default {
       Exercises: false,
       Temperature: false,
       Pressure: false,
-      pulse: false
+      pulse: false,
+      Breakfast: false
     }
   },
   computed: {
