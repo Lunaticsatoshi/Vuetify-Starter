@@ -169,6 +169,9 @@ export default new Vuex.Store({
     updateOxygen(state, val){
       state.morning.oxygen[val.day] = val.value
     },
+    updateGargles(state, val){
+      state.morning.Gargles[val.day] = val.value
+    },
     updateStartDate(state, val){
       state.startTimeStamp = val
     }

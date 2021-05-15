@@ -160,12 +160,16 @@ export default {
     },
     oxygen(value){
       this.$store.commit('updateOxygen',{day: this.currentDay, value})
+    },
+    Gargles(value){
+      this.$store.commit('updateGargles',{day: this.currentDay, value})
     }
   },
   created() {
     this.$store.dispatch('updateCurrentDay',this.day)
 
     this.oxygen = this.$store.state.morning.oxygen[this.day]
+    this.Gargles = this.$store.state.morning.Gargles[this.day]
   }
 
 };
