@@ -51,8 +51,7 @@ export default {
       rightDrawer: false,
       items: [
         { icon: "dashboard", text: "Home", route: "/" },
-        { icon: "folder", text: "About", route: "/about" },
-        { icon: "group", text: "Teams", route: "/thought" },
+        { icon: "folder", text: "About", route: "/about" }
       ],
 
   }
