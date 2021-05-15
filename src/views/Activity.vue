@@ -2,8 +2,8 @@
   <div id="scratch">
     <v-container class="my-8 mx-auto text-center">
 
-      <h3> Positive Affirmations can help you feel at peace and boost positive vibes. It's a wonderful way to keep going through the day!</h3>
-      <h3>Scratch to see today's Challenge</h3>
+      <h3>Simple activities will bring your attention to your present and let you appreciate your surroundings. It's a wonderful world and YOU belong here!</h3>
+      <h3>Scratch to see today's Activity</h3>
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
           <v-col>
@@ -41,11 +41,9 @@
         </v-row>
         <v-row>
           <v-col cols="12">
-            <v-btn block color="yellow">Challenge Completed | 2 points</v-btn></v-col
+            <v-btn block color="yellow">{{ $t('Complete') }}</v-btn></v-col
           >
-          <v-col cols="12">
-            <v-btn block color="yellow">Challenge Completed | 2 points</v-btn></v-col
-          >
+
         </v-row>
       </v-container>
     </v-container>

@@ -15,7 +15,7 @@
 
         <v-row>
           <v-col cols="12">
-            <v-btn block color="yellow">Task Completed | 2 points</v-btn></v-col
+            <v-btn block absolute bottom class="appBar">{{ $t('complete') }}</v-btn></v-col
           >
         </v-row>
       </v-container>

@@ -2,11 +2,11 @@
   <v-container class="my-5 mx-auto">
     <h3>What are you most grateful for today</h3>
     <v-text-field
-      label="Outlined"
-      class="mt-6"
-      block
-      placeholder="write your thought"
-      outlined
+        label="I am grateful for my health..."
+        class="mt-6"
+        block
+        placeholder="write your thought"
+        outlined
     ></v-text-field>
     <v-container>
       <v-list>
@@ -15,7 +15,7 @@
             <template v-slot:default="{ active }">
               <v-list-item-content>
                 <v-list-item-title>
-                  <span class="font-weight-bold">share avatar</span>
+                  <span class="font-weight-bold">I am grateful for me</span>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-action>
@@ -29,7 +29,7 @@
             <template v-slot:default="{ active }">
               <v-list-item-content>
                 <v-list-item-title>
-                  <span class="font-weight-bold">share name</span>
+                  <span class="font-weight-bold">I smiled today</span>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-action>
@@ -40,13 +40,13 @@
         </v-list-item-group>
       </v-list>
     </v-container>
-    <v-btn block absolute bottom class="appBar">send and collect 2 points</v-btn>
+    <v-btn block absolute bottom class="appBar">Save</v-btn>
   </v-container>
 </template>
 
 <script>
 export default {
-  name: 'Gra'
+  name: 'Gratitude'
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-app-bar flat app >
+    <v-app-bar flat app color='purple lighten-4'>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-regular">{{$t(this.$route.name)}}</span>

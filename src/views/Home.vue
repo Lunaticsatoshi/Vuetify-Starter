@@ -2,15 +2,16 @@
   <div class="home">
     <v-container class="my-5 mx-auto">
 
-      <h1>Today Is {{$t('day')+ " "+(this.day + 1)}}</h1>
+      <h2 align=center>Today is a beautiful day...</h2>
+      <h3 align=center>{{$t('day')+ " "+(this.day + 1)}}</h3>
       <v-container row wrap class="my-5">
         <v-row>
           <v-col
-            cols="6"
-            md="4"
-            lg="4"
-            v-for="card in cards"
-            :key="card.name"
+              cols="6"
+              md="4"
+              lg="4"
+              v-for="card in cards"
+              :key="card.name"
           >
             <Card :card="card" >
             </Card>
@@ -38,32 +39,37 @@ export default {
       hidden: false,
       cards: [
         {
-          name: "Morning Routine",
-          icon: "mdi-account-clock",
+          name: "Daily Morning Routine",
+          icon: "mdi-weather-sunset",
           path: 'morning'
         },
         {
           name: "Positive Affirmations",
+          icon: "mdi-head-heart",
           path: 'affirmations'
 
         },
         {
           name: "Gratitude",
+          icon: "mdi-hand-heart",
           path: 'gratitude'
 
         },
         {
           name: "Short Story",
+          icon: "mdi-audio-video",
           path: 'shortStory'
 
         },
         {
           name: "Activity",
+          icon: "mdi-human-scooter",
           path: 'activity'
 
         },
         {
           name: "Journal",
+          icon: "mdi-script-text-play",
           path: 'journal'
 
         },
