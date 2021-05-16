@@ -1,5 +1,5 @@
 <template>
-  <v-card class="text-center" :to="card.path" >
+  <v-card class="text-center" :to="card.path" :color="card.color">
     <!-- <v-row>
       <v-col class="text-center mt-5">
         <v-avatar size="50">

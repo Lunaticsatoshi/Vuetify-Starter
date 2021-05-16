@@ -18,9 +18,6 @@
           </v-col>
         </v-row>
       </v-container>
-      <v-btn v-show="!hidden" color="pink" dark absolute bottom right fab>
-        <v-icon>mdi-plus</v-icon>
-      </v-btn>
     </v-container>
   </div>
 </template>
@@ -41,36 +38,42 @@ export default {
         {
           name: this.$t('home_title_2'),
           icon: "mdi-weather-sunset",
-          path: 'morning'
+          path: 'morning',
+          color: "orange lighten-5"
         },
         {
           name: this.$t('home_title_3'),
           icon: "mdi-head-heart",
-          path: 'affirmations'
+          path: 'affirmations',
+          color: "yellow lighten-5"
 
         },
         {
           name: this.$t('home_title_4'),
           icon: "mdi-hand-heart",
-          path: 'gratitude'
+          path: 'gratitude',
+          color: "green lighten-5"
 
         },
         {
           name: this.$t('home_title_5'),
           icon: "mdi-audio-video",
-          path: 'shortStory'
+          path: 'shortStory',
+          color: "red lighten-5"
 
         },
         {
           name: this.$t('home_title_6'),
           icon: "mdi-human-scooter",
-          path: 'activity'
+          path: 'activity',
+          color: "purple lighten-5"
 
         },
         {
           name: this.$t('home_title_7'),
           icon: "mdi-script-text-play",
-          path: 'journal'
+          path: 'journal',
+          color: "blue lighten-5"
 
         },
       ],

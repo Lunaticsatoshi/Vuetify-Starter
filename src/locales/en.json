@@ -1,7 +1,16 @@
 {
   "day": "Day",
   "Home": "Home",
+  "About": "About",
+  "Gratitude": "Gratitude",
+  "Affirmations":"Affirmations",
+  "Journal": "Journal",
+  "Activity":"Activity",
+  "ShortStory":"Short Story",
+  "Morning": "Morning Routine",
 
+  "about_title_1":"About Nysa App",
+  "about_title_2":"While social distancing is a term new to many of us, for some isolation has been a way of life long before current scenario that turned our world upside down, and limited our horizons to the corners of our own homes. Nysa App gives you some tips for getting through isolation by maintaining a schedule and boosting you with daily alternates. It is essential to make living alone and apart from others work, while maintaining mental and physical wellbeing – and maybe even coming out the other side a little bit stronger. Nysa App. ",
   "short_stories":  [
     " A wise man once faced a group of people who were complaining about the same issues over and over again. One day, instead of listening to the complaints, he told them a joke and everyone cracked up laughing. Then, the man repeated the joke. A few people smiled. Finally, the man repeated the joke a third time but no one reacted. The man smiled and said, \" You won’t laugh at the same joke more than once. So what are you getting from continuing to complain about the same problem?\"",
     " In the 1940s, there was a man who, at the age of 65, was living off of $99 social security checks in a small house, driving a beat-up car. He decided it was time to make a change, so he thought about what he had to offer that other people may benefit from. His mind went to his fried chicken recipe, which his friends and family loved. He left his home state of Kentucky and traveled throughout the country, trying to sell his recipe to restaurants. He even offered the recipe for free, asking for only a small chunk of the money that was earned. However, most of the restaurants declined his offer. In fact, 1,009 restaurants said no. But even after all of the rejections, he persisted. He believed in himself and his chicken recipe. When he visited restaurant #1,010, he got a YES. His name, Colonel Sanders - Owner of KFC today.",
@@ -53,7 +62,6 @@
     " Take a piece of paper and create an airplane. Now write your name on it. Fly it. You are almost there",
     " Listen to a new podcast or new music"
   ],
-  "morning": "Morning",
   "morning_title_1" : "Monitor & Regulate Your Routine",
   "morning_title_2" : "Start your day on the right foot",
   "morning_title_3" : "General",
