@@ -276,6 +276,24 @@ export default new Vuex.Store({
     updateGargles(state, val){
       state.morning.Gargles[val.day] = val.value
     },
+    updateMedicine(state, val){
+      state.morning.Medicine[val.day] = val.value
+    },
+    updateExercises(state, val){
+      state.morning.Exercises[val.day] = val.value
+    },
+    updateTemperature(state, val){
+      state.morning.Temperature[val.day] = val.value
+    },
+    updatePressure(state, val){
+      state.morning.Pressure[val.day] = val.value
+    },
+    updatepulse(state, val){
+      state.morning.pulse[val.day] = val.value
+    },
+    updateBreakfast(state, val){
+      state.morning.Breakfast[val.day] = val.value
+    },
 
     updateGratitudeText(state, val){
       state.gratitude.gratitudeText[val.day] = val.value

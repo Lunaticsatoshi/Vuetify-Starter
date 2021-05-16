@@ -36,11 +36,15 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-      <WhatsApp-button
-    v-bind:shareUrl="this.gratitudeText+' '+this.$t('title_social')"
+      <h5>{{$t('gratitude_title_6')}}</h5>
+      <WhatsApp-button v-bind:isBlank="false" btnText
+    v-bind:shareUrl="this.$t('gratitude_title_7')+' '+this.gratitudeText+' '+this.$t('title_social')"
     />
-    <twitter-button
-    v-bind:shareUrl="this.gratitudeText+' '+this.$t('title_social')"
+    <twitter-button v-bind:isBlank="false" btnText
+    v-bind:shareUrl="this.$t('gratitude_title_7')+' '+this.gratitudeText+' '+this.$t('title_social')"
+    />
+    <facebook-button v-bind:isBlank="false" btnText
+    v-bind:shareUrl="this.$t('gratitude_title_7')+' '+this.gratitudeText+' '+this.$t('title_social')"
     />
     </v-container>
   </v-container>
@@ -51,12 +55,15 @@
 import {mapGetters, mapState} from "vuex";
 import WhatsAppButton from "vue-share-buttons/src/components/WhatsAppButton";
 import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import FacebookButton from "vue-share-buttons/src/components/FacebookButton";
 export default {
   name: 'Gratitude',
 
   components: {
     WhatsAppButton,
-    TwitterButton
+    TwitterButton,
+    FacebookButton
+
      },
 
   data(){

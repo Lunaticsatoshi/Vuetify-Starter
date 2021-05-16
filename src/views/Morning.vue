@@ -166,6 +166,21 @@ export default {
     },
     Medicine(value){
       this.$store.commit('updateMedicine',{day: this.currentDay, value})
+    },
+    Exercises(value){
+      this.$store.commit('updateExercises',{day: this.currentDay, value})
+    },
+    Temperature(value){
+      this.$store.commit('updateTemperature',{day: this.currentDay, value})
+    },
+    Pressure(value){
+      this.$store.commit('updatePressure',{day: this.currentDay, value})
+    },
+    Pulse(value){
+      this.$store.commit('updatepulse',{day: this.currentDay, value})
+    },
+    Breakfast(value){
+      this.$store.commit('updateBreakfast',{day: this.currentDay, value})
     }
   },
   created() {
@@ -174,6 +189,11 @@ export default {
     this.oxygen = this.$store.state.morning.oxygen[this.day]
     this.Gargles = this.$store.state.morning.Gargles[this.day]
     this.Medicine = this.$store.state.morning.Medicine[this.day]
+    this.Exercises = this.$store.state.morning.Exercises[this.day]
+    this.Temperature = this.$store.state.morning.Temperature[this.day]
+    this.Pressure = this.$store.state.morning.Pressure[this.day]
+    this.pulse = this.$store.state.morning.pulse[this.day]
+    this.Breakfast = this.$store.state.morning.Breakfast[this.day]
   }
 
 };
