@@ -30,7 +30,7 @@
         <v-row>
           <v-col cols="6">
             <v-btn block class="appBar" @click="forceReveal = true"
-            >{{$t('skipscratch')}}</v-btn
+            >{{$t('SkipScratch')}}</v-btn
             >
           </v-col>
           <v-col cols="6">
@@ -39,12 +39,7 @@
             >
           </v-col>
         </v-row>
-        <v-row>
-          <v-col cols="12">
-            <v-btn block color="yellow">{{ $t('Complete') }}</v-btn></v-col
-          >
-
-        </v-row>
+        
       </v-container>
     </v-container>
   </div>

@@ -34,7 +34,7 @@
 <!--    Day list-->
     <v-navigation-drawer app right  v-model="rightDrawer" >
       <v-list nav dense>
-        <v-list-item color="purple" v-for="day in days" :key="day.value" @click=changeDay(day)>{{day.text}}</v-list-item>
+        <v-list-item v-for="day in days" :key="day.value" @click=changeDay(day)>{{day.text}}</v-list-item>
       </v-list>
     </v-navigation-drawer>
   </div>
