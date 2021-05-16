@@ -21,7 +21,7 @@
                       :height="cardHeight">
 
                 <v-card-text>
-                  <div class="heading mt-1">{{$t(`affirmations[${day}]`)}}</div>
+                  <div class="heading mt-1">{{$t(`affirmations[${currentDay}]`)}}</div>
                 </v-card-text>
               </v-card>
             </scratch-card>
@@ -52,7 +52,7 @@
 
 <script>
 import ScratchCard from "vue-scratchcard";
-import {mapGetters} from "vuex"
+import {mapGetters, mapState} from "vuex"
 export default {
   name: "Affirmations",
   components: {
@@ -70,13 +70,16 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      currentDay: state=>state.currentDay
+    }),
     ...mapGetters([
       'day',
     ])
   },
+  
   created() {
-    this.$store.dispatch('updateCurrentDay',this.$store.state.day)
-
+    this.$store.dispatch('updateCurrentDay',this.day)
   }
 
 };

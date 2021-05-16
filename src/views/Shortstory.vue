@@ -46,7 +46,7 @@ export default {
     ])
   },
   created() {
-    this.$store.dispatch('updateCurrentDay',this.$store.state.day)
+    this.$store.dispatch('updateCurrentDay',this.day)
 
   }
 };
