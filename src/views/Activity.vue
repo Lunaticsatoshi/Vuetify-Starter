@@ -21,7 +21,7 @@
                       :height="cardHeight">
 
               <v-card-text>
-                <div class="heading mt-1">{{$t(`activity[${day}]`)}}</div>
+                <div class="heading mt-1">{{$t(`activity[${currentDay}]`)}}</div>
                 </v-card-text>
               </v-card>
             </scratch-card>
@@ -52,7 +52,7 @@
 
 <script>
 import ScratchCard from "vue-scratchcard";
-import {mapGetters} from "vuex"
+import {mapGetters, mapState} from "vuex"
 export default {
   name: "Activity",
   components: {
@@ -71,6 +71,9 @@ export default {
     };
   },
   computed: {
+    ...mapState({
+      currentDay: state=>state.currentDay
+    }),
     ...mapGetters([
       'day',
     ])

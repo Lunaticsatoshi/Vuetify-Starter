@@ -176,7 +176,7 @@ export default {
     Pressure(value){
       this.$store.commit('updatePressure',{day: this.currentDay, value})
     },
-    Pulse(value){
+    pulse(value){
       this.$store.commit('updatepulse',{day: this.currentDay, value})
     },
     Breakfast(value){
