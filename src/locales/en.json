@@ -1,5 +1,7 @@
 {
   "day": "Day",
+  "Home": "Home",
+
   "short_stories":  [
     " A wise man once faced a group of people who were complaining about the same issues over and over again. One day, instead of listening to the complaints, he told them a joke and everyone cracked up laughing. Then, the man repeated the joke. A few people smiled. Finally, the man repeated the joke a third time but no one reacted. The man smiled and said, \" You won’t laugh at the same joke more than once. So what are you getting from continuing to complain about the same problem?\"",
     " In the 1940s, there was a man who, at the age of 65, was living off of $99 social security checks in a small house, driving a beat-up car. He decided it was time to make a change, so he thought about what he had to offer that other people may benefit from. His mind went to his fried chicken recipe, which his friends and family loved. He left his home state of Kentucky and traveled throughout the country, trying to sell his recipe to restaurants. He even offered the recipe for free, asking for only a small chunk of the money that was earned. However, most of the restaurants declined his offer. In fact, 1,009 restaurants said no. But even after all of the rejections, he persisted. He believed in himself and his chicken recipe. When he visited restaurant #1,010, he got a YES. His name, Colonel Sanders - Owner of KFC today.",
@@ -97,7 +99,7 @@
   "activity_title_1" : "Simple activities will bring your attention to your present and let you appreciate your surroundings. It's a wonderful world and YOU belong here!",
   "activity_title_2" : "Scratch to see today's Activity",
   "title_social":  "Created using Nysa App. Download now: www.tablenotes.net",
-  "skipscratch":  "Skip Scratch",
+  "SkipScratch":  "Skip Scratch",
   "reset":  "Reset",
   "complete":  "Complete",
   "days": [
