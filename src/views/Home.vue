@@ -2,7 +2,7 @@
   <div class="home">
     <v-container class="my-5 mx-auto">
 
-      <h2 align=center>Today is a beautiful day...</h2>
+      <h2 align=center>{{$t('home_title_1')}}</h2>
       <h3 align=center>{{$t('day')+ " "+(this.day + 1)}}</h3>
       <v-container row wrap class="my-5">
         <v-row>
@@ -39,36 +39,36 @@ export default {
       hidden: false,
       cards: [
         {
-          name: "Daily Morning Routine",
+          name: this.$t('home_title_2'),
           icon: "mdi-weather-sunset",
           path: 'morning'
         },
         {
-          name: "Positive Affirmations",
+          name: this.$t('home_title_3'),
           icon: "mdi-head-heart",
           path: 'affirmations'
 
         },
         {
-          name: "Gratitude",
+          name: this.$t('home_title_4'),
           icon: "mdi-hand-heart",
           path: 'gratitude'
 
         },
         {
-          name: "Short Story",
+          name: this.$t('home_title_5'),
           icon: "mdi-audio-video",
           path: 'shortStory'
 
         },
         {
-          name: "Activity",
+          name: this.$t('home_title_6'),
           icon: "mdi-human-scooter",
           path: 'activity'
 
         },
         {
-          name: "Journal",
+          name: this.$t('home_title_7'),
           icon: "mdi-script-text-play",
           path: 'journal'
 

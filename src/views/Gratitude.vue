@@ -1,12 +1,12 @@
 <template>
   <v-container class="my-5 mx-auto">
-    <h3>What are you most grateful for today</h3>
+    <h3>{{$t('gratitude_title_1')}}</h3>
     <v-text-field
         v-model="gratitudeText"
-        label="I am grateful for my health..."
+        v-bind:label="$t('gratitude_title_2')"
         class="mt-6"
         block
-        placeholder="write your thought"
+        v-bind:placeholder="$t('gratitude_title_3')"
         outlined
     ></v-text-field>
     <v-container>
@@ -15,7 +15,7 @@
           <v-list-item>
               <v-list-item-content>
                 <v-list-item-title>
-                  <span class="font-weight-bold">I am grateful for me</span>
+                  <span class="font-weight-bold">{{$t('gratitude_title_4')}}</span>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-action>
@@ -27,7 +27,7 @@
           <v-list-item>
               <v-list-item-content>
                 <v-list-item-title>
-                  <span class="font-weight-bold">I smiled today</span>
+                  <span class="font-weight-bold">{{$t('gratitude_title_5')}}</span>
                 </v-list-item-title>
               </v-list-item-content>
               <v-list-item-action>
@@ -36,15 +36,29 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
+      <WhatsApp-button
+    v-bind:shareUrl="this.gratitudeText+' '+this.$t('title_social')"
+    />
+    <twitter-button
+    v-bind:shareUrl="this.gratitudeText+' '+this.$t('title_social')"
+    />
     </v-container>
   </v-container>
+    
 </template>
 
 <script>
-import {mapGetters, mapState} from "vuex"
-
+import {mapGetters, mapState} from "vuex";
+import WhatsAppButton from "vue-share-buttons/src/components/WhatsAppButton";
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
 export default {
   name: 'Gratitude',
+
+  components: {
+    WhatsAppButton,
+    TwitterButton
+     },
+
   data(){
     return {
       gratitudeText: '',
@@ -84,6 +98,7 @@ export default {
     this.gratitudeCheck2 = this.$store.state.gratitude.gratitudeCheck2[this.day]
 
   }
+
 
 };
 </script>

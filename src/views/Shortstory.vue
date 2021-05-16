@@ -2,13 +2,13 @@
   <div id="scratch">
     <v-container class="my-8 mx-auto text-center">
 
-      <h3>Short stories to bring you back to savour the happiness in tiny moments.</h3>
-      <h3>Read today's story and retrospect</h3>
+      <h3>{{$t('ss_title_1')}}</h3>
+      <h4>{{$t('ss_title_2')}}</h4>
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
           <v-col>
             <vue-typed-js :strings="[$t(`short_stories[${day}]`)]">
-              <h1 class="typing"></h1>
+              <h5 class="typing"></h5>
             </vue-typed-js>
           </v-col>
         </v-row>

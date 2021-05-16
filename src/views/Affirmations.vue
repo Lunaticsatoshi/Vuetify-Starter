@@ -2,8 +2,8 @@
   <div id="scratch">
     <v-container class="my-8 mx-auto text-center">
 
-      <h3> Positive Affirmations can help you feel at peace and boost positive vibes. It's a wonderful way to keep going through the day!</h3>
-      <h3>Scratch to see today's Affirmation</h3>
+      <h3>{{$t('affirmation_title_1')}}</h3>
+      <h4>{{$t('affirmation_title_2')}}</h4>
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
           <v-col>
@@ -30,18 +30,18 @@
         <v-row>
           <v-col cols="6">
             <v-btn block class="appBar" @click="forceReveal = true"
-            >Skip Scratch</v-btn
+            >{{$t('SkipScratch')}}</v-btn
             >
           </v-col>
           <v-col cols="6">
             <v-btn block class="appBar" @click="renderCount++"
-            >Reset</v-btn
+            >{{$t('reset')}}</v-btn
             >
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12">
-            <v-btn block color="yellow">Complete</v-btn></v-col
+            <v-btn block color="yellow">{{$t('complete')}}</v-btn></v-col
           >
 
         </v-row>

@@ -2,8 +2,8 @@
   <div id="scratch">
     <v-container class="my-8 mx-auto text-center">
 
-      <h3>Simple activities will bring your attention to your present and let you appreciate your surroundings. It's a wonderful world and YOU belong here!</h3>
-      <h3>Scratch to see today's Activity</h3>
+      <h3>{{$t('activity_title_1')}}</h3>
+      <h4>{{$t('activity_title_2')}}</h4>
       <v-container fluid class="my-5">
         <v-row align="center" justify="center">
           <v-col>
@@ -30,12 +30,12 @@
         <v-row>
           <v-col cols="6">
             <v-btn block class="appBar" @click="forceReveal = true"
-            >Skip Scratch</v-btn
+            >{{$t('skipscratch')}}</v-btn
             >
           </v-col>
           <v-col cols="6">
             <v-btn block class="appBar" @click="renderCount++"
-            >Reset</v-btn
+            >{{$t('reset')}}</v-btn
             >
           </v-col>
         </v-row>
