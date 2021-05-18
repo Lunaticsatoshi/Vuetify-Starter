@@ -12,7 +12,9 @@
       <v-spacer/>
       <v-toolbar-items>
         <v-icon v-if="this.$route.name !== 'Home'" @click="rightDrawer = !rightDrawer">mdi-calendar-today</v-icon>
-
+        <slot v-else>
+          <v-icon @click="changeLanguage">mdi-translate</v-icon>
+        </slot>
       </v-toolbar-items>
     </v-app-bar>
     <v-navigation-drawer absolute temporary v-model="drawer" class="primary">
@@ -74,6 +76,10 @@ export default {
     }
   },
   methods: {
+    changeLanguage(){
+      this.$i18n.locale = this.$i18n.locale ==='en'?'hi':'en'
+      localStorage.setItem('language',this.$i18n.locale)
+    },
     changeDay(day){
       this.rightDrawer = false
       this.$store.dispatch('updateCurrentDay',day.value)
