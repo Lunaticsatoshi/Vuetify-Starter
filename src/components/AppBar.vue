@@ -11,7 +11,7 @@
       </v-toolbar-title>
       <v-spacer/>
       <v-toolbar-items>
-        <v-icon v-if="this.$route.name !== 'Home'" @click="rightDrawer = !rightDrawer">mdi-calendar-today</v-icon>
+        <v-icon v-if="this.$route.name !== 'Home' && this.$route.name !== 'About'" @click="rightDrawer = !rightDrawer">mdi-calendar-today</v-icon>
         <slot v-else>
           <v-icon @click="changeLanguage">mdi-translate</v-icon>
         </slot>
