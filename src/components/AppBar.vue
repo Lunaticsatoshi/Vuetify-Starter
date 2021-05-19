@@ -52,8 +52,8 @@ export default {
       drawer: false,
       rightDrawer: false,
       items: [
-        { icon: "dashboard", text: "Home", route: "/" },
-        { icon: "folder", text: "About", route: "/about" }
+        { icon: "dashboard", text: this.$t('home'), route: "/" },
+        { icon: "folder", text: this.$t('about'), route: "/about" }
       ],
 
   }
