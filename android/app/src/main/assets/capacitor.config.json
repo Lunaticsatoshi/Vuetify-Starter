@@ -1,0 +1,13 @@
+{
+  "appId": "com.solutiondevelopers.nysa",
+  "appName": "nysa",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "public",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
