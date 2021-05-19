@@ -3,10 +3,10 @@
   "appName": "nysa",
   "bundledWebRuntime": false,
   "npmClient": "npm",
-  "webDir": "public",
+  "webDir": "dist",
   "plugins": {
     "SplashScreen": {
-      "launchShowDuration": 0
+      "launchShowDuration": 1
     }
   },
   "cordova": {}
