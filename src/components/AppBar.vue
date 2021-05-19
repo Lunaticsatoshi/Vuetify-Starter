@@ -79,6 +79,8 @@ export default {
     changeLanguage(){
       this.$i18n.locale = this.$i18n.locale ==='en'?'hi':'en'
       localStorage.setItem('language',this.$i18n.locale)
+      window.location.reload(true);
+
     },
     changeDay(day){
       this.rightDrawer = false
