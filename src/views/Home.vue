@@ -93,8 +93,7 @@ export default {
     ]),
   },
   created() {
-    console.log('home')
-    // this.updateStartDate(new Date('2021-05-05').getTime())
+    this.updateStartDate()
     this.updateCurrentDay(this.day)
   }
 };

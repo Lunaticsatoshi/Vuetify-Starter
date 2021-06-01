@@ -8,7 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
-    startTimeStamp: new Date().getTime(),
+    startTimeStamp: 0,
     currentDay: 0,
     morning : {
       oxygen:  [
@@ -314,8 +314,12 @@ export default new Vuex.Store({
     updateJournalCheck2(state, val){
       state.journal.journalCheck2[val.day] = val.value
     },
-    updateStartDate(state, val){
-      state.startTimeStamp = val
+    updateStartDate(state){
+      if (state.startTimeStamp === 0) {
+        let date = new Date().getTime()
+        date.setHours(0)
+        state.startTimeStamp = date
+      }
     }
   },
   actions: {
