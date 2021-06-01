@@ -316,9 +316,9 @@ export default new Vuex.Store({
     },
     updateStartDate(state){
       if (state.startTimeStamp === 0) {
-        let date = new Date().getTime()
+        let date = new Date()
         date.setHours(0)
-        state.startTimeStamp = date
+        state.startTimeStamp = date.getTime()
       }
     }
   },
